@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+      
+         <meta http-equiv="X-UA-compatible">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+      
+          <title>drawing app</title>
+          <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link type="text/css" href="drawing.css"> 
+    <!--jquery ui link  -->
+           <link rel="stylesheet" href="css/jquery-ui.min.css">
+        
+        <!-- select this link for the google font-->
+        <link href="https://fonts.googleapis.com/css?family=Vollkorn&display=swap" rel="stylesheet">
+ </head>
+    <style>
+        /*center all the element and add the background image */
+body
+{
+    background: url(photod/background.jpg)center center fixed ;
+    background-size: cover;
+}
+        #header
+        {
+          background: linear-gradient(white,rgba(147,97,203,0.1));
+            width:500px;
+            height:80px;
+            margin:40px 550px;
+            font-size: 3em;
+            color:#fff;
+            line-height: 80px;
+            text-align: center;
+            font-family: 'vollkorn',sans-serif;
+            
+        }
+        /*input container*/
+        .inputContainer
+        {
+            width:200px;
+            margin: 0 auto;
+            
+        }
+        /*input*/
+        .input{
+            height: 30px;
+            font-size: 1.3em;
+            
+        }
+        #slider
+        {
+            margin: 10px auto;
+        }
+        #circle{
+            height:30px;
+            width:30px;
+            border-radius: 50%;
+            background:black;
+            margin:0 auto;
+            position:absolute;
+            top: 50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            
+        }
+        #thicknessInput
+        {
+         position: relative;
+            
+        }
+        #container
+        {
+            width: 500px;
+            height: 400px;
+            border:2px solid black;
+            margin:10px auto;
+        }
+        .inputContainer2{
+            width:399px;
+            margin: 0 auto;
+    }
+        /*buttons*/
+        .input2
+        {
+            width:133px;
+            color:brown;
+            font-size: 1.3em;
+            float:left;
+            }
+        .button{
+            background: #fff;
+            height:50px;
+            padding:10px;
+            border-radius: 3px;
+            font-weight: bold;
+            
+            cursor: pointer;
+            box-shadow: 0px 4px rgba(0,0,0,0.2);
+        }
+        .button:hover{
+            color:#fff;
+            background: linear-gradient(white,rgba(147,97,203,0.1));
+        }
+                .button:active{
+                 top:4px;
+                 }
+        #paint
+        {
+            background-color:white;
+            cursor:crosshair;
+        }
+        .eraseMode{
+         background-color: red;
+            color:white;
+        }
+                   @media(max-width:768px)
+           {
+               #header
+               {
+                             background: linear-gradient(white,rgba(147,97,203,0.1));
+            width:300px;
+            height:80px;
+            margin:40px 150px;
+            font-size: 3em;
+            color:#fff;
+            line-height: 80px;
+            text-align: center;
+            font-family: 'vollkorn',sans-serif;
+               }
+                       #container
+        {
+            width: 400px;
+            height: 400px;
+            border:2px solid black;
+            margin:10px auto;
+        }
+}
+                   
+           @media(max-width:400px)
+           {
+                              #header
+               {
+                             background: linear-gradient(white,rgba(147,97,203,0.1));
+            width:300px;
+            height:80px;
+            margin:40px 50px;
+            font-size: 3em;
+            color:#fff;
+            line-height: 80px;
+            text-align: center;
+            font-family: 'vollkorn',sans-serif;
+               }
+
+                             #container
+        {
+            width: 400px;
+            height: 400px;
+            border:2px solid black;
+            margin:10px;
+        }
+           }
+    
+      </style>
+    
+    <body>
+        <!--title header-->
+   <div id="header">
+        Drawing App
+        </div>
+         <!--title header-->
+        <div class="inputContainer">
+             <!--title header-->
+         <div class="input" id="colorInput">
+             <input type="color" list  id="paintColor">
+             
+            </div>
+                         <!--size-->
+            <div class="input" id="thicknessInput">
+            <div id="circle"></div>
+            
+            </div>
+            <div class="input">
+            <div id="slider">
+                
+                </div>
+            </div>
+        
+        
+        </div>
+        <!--canvas container-->
+        <div id="container" >
+           <canvas id="paint" width="500px" height="400px"></canvas> 
+            
+            
+        </div>
+        <!--buttons-->
+        <div class="inputContainer2">
+            <!--erase-->
+            <div class="input2">
+            <span id="erase" class="button">erase</span>
+            </div>
+                <!--save-->
+            <div class="input2">
+            <span id="save" class="button">save</span>
+            </div>
+                <!--reset-->
+            <div class="input2">
+            <span id="reset" class="button">reset</span>
+            </div>
+        </div>
+
+        
+        
+        
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+        
+     
+        <!--jquery ui link  -->
+        <script
+  src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"
+  integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw="
+  crossorigin="anonymous"></script>
+        <script src="js/bootstrap.min.js"></script>
+     <script src="drawing.js"></script>
+    
+    </body>
+   
+ 
+</html> 
